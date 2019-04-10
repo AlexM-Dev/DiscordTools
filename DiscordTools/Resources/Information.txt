@@ -1,0 +1,3 @@
+﻿DiscordTools, written by Alex M. 
+
+Visit my GitHub at https://www.github.com/AlexM-Dev.
