@@ -13,4 +13,8 @@
     <EmbeddedResource Include="Resources\Information.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
 </Project>

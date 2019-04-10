@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiscordTools.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace DiscordTools.Tools {
 
         public bool RequiresToken => false;
 
-        public async Task<string> GetData(params object[] args) {
+        public async Task<string> GetData(TokenHolder token, 
+            History hist, params object[] args) {
             return "Hello, world";
         }
     }

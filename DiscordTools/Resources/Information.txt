@@ -1,3 +1,4 @@
 ﻿DiscordTools, written by Alex M. 
 
 Visit my GitHub at https://www.github.com/AlexM-Dev.
+You can visit the issue tracker to make suggestions at any time.
