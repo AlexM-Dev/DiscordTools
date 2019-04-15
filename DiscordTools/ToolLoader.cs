@@ -1,11 +1,21 @@
-﻿using System;
+﻿using DiscordTools.Data;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
 namespace DiscordTools.Tools {
-    class ToolLoader {
-        public static List<ITool> GetTools() {
+    class ToolLoader { 
+        public TokenHolder Token { get; set; }
+
+        public List<ITool> Tools { get; }
+
+        public ToolLoader() {
+            this.Token = new TokenHolder();
+            this.Tools = fetchTools();
+        }
+
+        private List<ITool> fetchTools() {
             var assembly = Assembly.GetExecutingAssembly();
             var tools = new List<ITool>();
 

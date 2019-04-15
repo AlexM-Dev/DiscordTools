@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DiscordTools.Data {
-    static class ConfManager {
+    internal static class ConfManager {
         /// <summary>
         /// Load a JSON file.
         /// </summary>

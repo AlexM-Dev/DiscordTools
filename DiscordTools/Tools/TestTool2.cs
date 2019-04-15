@@ -17,7 +17,7 @@ namespace DiscordTools.Tools {
         public bool RequiresToken => true;
 
         public async Task<string> GetData(TokenHolder token, 
-            History hist, params object[] args) {
+            params object[] args) {
             return "Hello, world";
         }
     }
