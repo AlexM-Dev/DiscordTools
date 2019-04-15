@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace DiscordTools.Tools {
-    class ToolLoader { 
+    class ToolLoader {
         public TokenHolder Token { get; set; }
 
         public List<ITool> Tools { get; }
@@ -27,6 +30,16 @@ namespace DiscordTools.Tools {
             }
 
             return tools;
+        }
+
+        public async Task<string> GetData(ITool tool, params object[] args) {
+            return await tool.GetData(this.Token, args);
+        }
+
+        public async Task<string[]> GetData(string pattern, params object[] args) {
+            return await Task.WhenAll(Tools
+                .Where(t => Regex.IsMatch(t.Name, pattern))
+                .Select(async t => await t.GetData(this.Token, args)));
         }
     }
 }
